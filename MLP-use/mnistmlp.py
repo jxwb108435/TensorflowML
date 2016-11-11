@@ -49,8 +49,8 @@ n_hidden_1 = 12  # layer1 num features
 n_hidden_2 = 12  # layer2 num features
 n_hidden_3 = 12  # layer3 num features
 n_hidden_4 = 12  # layer4 num features
-n_input = 3  # MNIST data input (img shape: 28*28)
-n_classes = 3  # MNIST total classes (0-9 digits)
+n_input = 3  # data input dim
+n_classes = 3  # total classes
 batch_size = 1
 
 train_flags = True
