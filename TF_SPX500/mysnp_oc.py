@@ -138,7 +138,8 @@ test_dict = {inputs_holder: test_inputs_df.values,
              labels_holder: test_labels_df.values.reshape(len(test_labels_df.values), dim_out)}
 
 with tf.Session() as sess:
-    sess.run(tf.initialize_all_variables())
+    # version 0.11 change tf.initialize_all_variables() -> tf.global_variables_initializer()
+    sess.run(tf.global_variables_initializer())
 
     for i in range(1, 5001):
         sess.run(train_op, feed_dict=train_dict)
