@@ -33,7 +33,7 @@ with tf.device('/gpu:0'):
 
 # with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
 with tf.Session() as sess:
-    sess.run(tf.initialize_all_variables())
+    sess.run(tf.global_variables_initializer())
 
     for i in range(101):
         sess.run(train_op)
